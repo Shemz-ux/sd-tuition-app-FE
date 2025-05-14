@@ -47,3 +47,41 @@
 .container-fluid{
   width: 100vw;
 }
+
+/* .profile{
+  margin: 2rem;
+} */
+
+.transparent-input {
+  background-color: transparent !important;
+  border: 1px solid white;
+  color: white;
+}
+
+.transparent-input::placeholder{
+  color: rgba(255, 255, 255, 0.523);
+} 
+
+.form-control.is-valid {
+  border-color: #F0AE58 !important;
+  box-shadow: 0 0 0 0.2rem rgba(240, 174, 88, 0.25); /* Optional: custom glow */
+}
+
+.form-control.is-valid:focus {
+  border-color: #F0AE58 !important;
+  box-shadow: 0 0 0 0.2rem rgba(240, 174, 88, 0.5); /* Stronger on focus */
+}
+
+.add-child {
+  background-color: transparent !important;
+  border: 1px solid white;
+  border-radius: 8px;
+  color: white;
+}
+
+.add-child:hover {
+  background-color: #F0AE58 !important;
+  color: black;
+}
+
+  
