@@ -12,10 +12,13 @@
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
+  cursor: pointer;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
+
+/* .logo:hover {
+  filter: drop-shadow(0 0 2em #F0AE58);
+} */
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
@@ -54,22 +57,38 @@
 
 .transparent-input {
   background-color: transparent !important;
-  border: 1px solid white;
-  color: white;
+  border: 1px solid #F0AE58;
+  color: white !important;
 }
 
 .transparent-input::placeholder{
   color: rgba(255, 255, 255, 0.523);
 } 
 
+.form-select{
+  color: rgba(255, 255, 255, 0.523) !important;
+}
+
+.form-select:focus{
+  box-shadow: 0 0 0 0.2rem rgba(240, 174, 88, 0.5) !important; /* soft gold glow */
+  border-color: #F0AE58 !important;
+  outline: none;
+}
+
+.form-control:focus {
+  box-shadow: 0 0 0 0.2rem rgba(240, 174, 88, 0.5) !important; /* soft gold glow */
+  border-color: #F0AE58 !important;
+  outline: none;
+}
+
 .form-control.is-valid {
   border-color: #F0AE58 !important;
-  box-shadow: 0 0 0 0.2rem rgba(240, 174, 88, 0.25); /* Optional: custom glow */
+  box-shadow: 0 0 0 0.2rem rgba(240, 174, 88, 0.25) !important;
 }
 
 .form-control.is-valid:focus {
   border-color: #F0AE58 !important;
-  box-shadow: 0 0 0 0.2rem rgba(240, 174, 88, 0.5); /* Stronger on focus */
+  box-shadow: 0 0 0 0.2rem rgba(240, 174, 88, 0.5) !important;
 }
 
 .add-child {
@@ -77,6 +96,7 @@
   border: 1px solid white;
   border-radius: 8px;
   color: white;
+  cursor: pointer
 }
 
 .add-child:hover {
@@ -84,4 +104,10 @@
   color: black;
 }
 
-  
+.delete-account{
+  cursor: pointer;
+}
+
+.delete-account:hover{
+  border-bottom: 1px solid red;
+}
