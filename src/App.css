@@ -51,9 +51,14 @@
   width: 100vw;
 }
 
-/* .profile{
-  margin: 2rem;
-} */
+.back-up{
+  color: #F0AE58 !important;
+}
+
+.back-up:hover{
+  border-bottom: 1px solid #F0AE58 !important;
+  cursor: pointer;
+}
 
 .transparent-input {
   background-color: transparent !important;

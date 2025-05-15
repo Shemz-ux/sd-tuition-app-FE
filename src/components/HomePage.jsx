@@ -4,28 +4,39 @@ import { BsPeople } from "react-icons/bs";
 import profile from "../assets/SK avatar.png";
 
 function HomePage(){
-    return <>
+    return <div id="home">
             <Navbar/>
-            <div className="welcome mb-3 mt-3">
-                <div>
-                    <img src={profile} alt="profile pic" style={{ width: "350px", height: "auto" }}/>
-                    <button className="btn mb-3" type="submit">register</button>
-                    </div>
-                <h1>Hello, I am Shem.</h1>
-                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-                
-                <div className="my-background mt-3 mb-3">
-                    <h3>My background</h3>
-                    <ul className="a">
-                        <li>Software Engineer</li>
-                        <li>University</li>
-                        <li>College</li>
-                    </ul>    
+            
+            <div className="welcome mb-5 mt-0 container">
+                <div className="row">
+                    <div className="col-md-4 d-flex flex-column align-items-center">
+                        <img src={profile} alt="profile pic" style={{ width: "100%", height: "auto", maxWidth: "350px" }} />
+                        <button className="btn mb-3" type="submit">Register</button>
+                        </div>
+                        
+                    <div className="col-md-8 mt-5">
+                        <h1>Hello, I am Shem.</h1>
+                        <p>
+                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                        </p>
+                        
+                            <div className="my-background mt-5 mb-3">
+                                <h3>My background</h3>
+                                <ul className="a">
+                                <li>Software Engineer</li>
+                                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                <li>University</li>
+                                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                <li>College</li>
+                                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
             </div>
 
             <div className="my-approach mt-3 mb-3">
-                <h3>My approach</h3>
+                <h4>My approach</h4>
                 <div className="d-flex justify-content-center gap-5 flex-wrap mt-4">
                     <div className="w-25 text-center">
                         <p style={{ color: "#F0AE58" }}>01.</p>
@@ -58,7 +69,7 @@ function HomePage(){
             </div>
 
             <div className="exam-board mt-3">
-                <h3>Exam boards</h3>
+                <h4>Exam boards</h4>
                 <div className="d-flex justify-content-center gap-5 flex-wrap mt-4">
                     <p>exam b1</p>
                     <p>exam b1</p>
@@ -67,7 +78,7 @@ function HomePage(){
                 </div>
 
             <div className="exam-board mt-3 mb-3">
-                <h3>Reviews</h3>
+                <h4>Reviews</h4>
                 <div className="d-flex justify-content-center gap-5 flex-wrap mt-4">
                     <div className="w-25 text-center">
                         <BsPeople size={100}/>
@@ -95,9 +106,13 @@ function HomePage(){
                     </div>
 
                     </div>
+                    <div className="d-flex flex-column align-items-center mt-5">
+                        <a className="back-up text-decoration-none text-reset" href="#home">back to top</a>
+                        </div>
+
                 </div>
 
-        </>
+        </div>
 }
 
 export default HomePage;
