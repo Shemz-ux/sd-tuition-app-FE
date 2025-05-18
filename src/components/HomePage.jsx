@@ -2,16 +2,19 @@ import { Navbar } from "./navbar";
 import { PiStudent } from "react-icons/pi";
 import { BsPeople } from "react-icons/bs";
 import profile from "../assets/SK avatar.png";
+import { Link } from "react-router-dom";
 
 function HomePage(){
     return <div id="home">
             <Navbar/>
-            
+
             <div className="welcome mb-5 mt-0 container">
                 <div className="row">
                     <div className="col-md-4 d-flex flex-column align-items-center">
                         <img src={profile} alt="profile pic" style={{ width: "100%", height: "auto", maxWidth: "350px" }} />
-                        <button className="btn mb-3" type="submit">Register</button>
+                        <Link to="/register">
+                            <button className="btn mb-3" type="submit">Register</button>
+                            </Link>
                         </div>
                         
                     <div className="col-md-8 mt-5">
@@ -26,6 +29,12 @@ function HomePage(){
                                 <li>Software Engineer</li>
                                 <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                                 <li>University</li>
+                                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                <li>College</li>
+                                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                <li>College</li>
+                                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                <li>College</li>
                                 <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                                 <li>College</li>
                                 <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>

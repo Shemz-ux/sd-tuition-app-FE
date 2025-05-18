@@ -10,35 +10,35 @@ function ParentProfile(){
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                 <form class="row g-4 mt-3">
                     <div class="col-md-6 ">
-                        <label for="firstName" class="form-label">First Name</label>
+                        <label htmlFor="firstName" class="form-label">First Name</label>
                         <input type="text" class="form-control form-control-lg transparent-input" id="firstName" placeholder="Enter first name" required/>
                         <div class="valid-feedback" style={{ color: "#F0AE58" }}>
                             Looks good!
                             </div>
                     </div>
                     <div class="col-md-6">
-                        <label for="lastName" class="form-label">Last Name</label>
+                        <label htmlFor="lastName" class="form-label">Last Name</label>
                         <input type="text" class="form-control form-control-lg transparent-input" id="lastName" placeholder="Enter first name" required/>
                         <div class="valid-feedback" style={{ color: "#F0AE58" }}>
                             Looks good!
                             </div>
                     </div>
                     <div class="col-12">
-                        <label for="email" class="form-label">Email</label>
+                        <label htmlFor="email" class="form-label">Email</label>
                         <input type="email" class="form-control form-control-lg transparent-input" id="email" placeholder="Enter your email" required/>
                         <div class="valid-feedback" style={{ color: "#F0AE58" }}>
                             Looks good!
                             </div>
                     </div>
                     <div class="col-12">
-                        <label for="mobile" class="form-label">Mobile</label>
+                        <label htmlFor="mobile" class="form-label">Mobile</label>
                         <input type="integer" class="form-control form-control-lg transparent-input" id="mobile" placeholder="Enter your mobile" required/>
                         <div class="valid-feedback" style={{ color: "#F0AE58" }}>
                             Looks good!
                             </div>
                     </div>
                     <div class="col-12">
-                        <label for="city" class="form-label">City</label>
+                        <label htmlFor="city" class="form-label">City</label>
                         <input type="text" class="form-control form-control-lg transparent-input" id="city" placeholder="Enter your city" required/>
                         <div class="valid-feedback" style={{ color: "#F0AE58" }}>
                             Looks good!
