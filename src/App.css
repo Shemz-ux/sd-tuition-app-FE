@@ -38,6 +38,26 @@
   }
 }
 
+.pic{
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.user-icon{
+  color: #F0AE58 !important;
+}
+
+.user-icon:hover{
+  color: #f0ae58df  !important;
+}
+
 .card {
   padding: 2em;
 }
@@ -67,7 +87,7 @@
 }
 
 .transparent-input::placeholder{
-  color: rgba(255, 255, 255, 0.523);
+  color: rgba(255, 255, 255, 0.522);
 } 
 
 .form-select{

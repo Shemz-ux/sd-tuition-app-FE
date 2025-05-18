@@ -11,7 +11,7 @@ function Register(){
         <>
         <Navbar />
         <div className="d-flex flex-column align-items-center">
-        <h1>Register</h1>
+        <h1>Register now!</h1>
             <div className="w-75 w-md-50 w-lg-30 mt-3">
                     <form class="row g-4 mt-3">
                         <div class="col-md-6 ">
@@ -51,9 +51,9 @@ function Register(){
                         </div>
                     </form>
                 </div>
-                <div className="w-75 w-md-50 w-lg-30 mt-5 text-center">
+                <div className="w-75 w-md-50 w-lg-30 mt-5 text-start">
                     <button className="btn mb-2 mt-3 p-2" type="submit"
-                    onClick={() => setClicked(true)}>Submit</button>
+                    onClick={() => setClicked(true)}>Next</button>
                     </div>
             </div>
             </>

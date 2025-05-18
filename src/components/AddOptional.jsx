@@ -2,16 +2,20 @@ import { useNavigate } from "react-router-dom";
 
 function AddOptional(){
     const navigate = useNavigate()
-    
-    return (<div className="d-flex flex-row justify-content-center align-items-center gap-3"
+
+    return (
+    <>
+    <div className="d-flex flex-row justify-content-center align-items-center gap-5"
         style={{ minHeight: "100vh" }}>
-        <div className="optional p-5 mt-3">
+        <div className="optional p-5 mt-3" onClick={()=>navigate("/addChild")}>
             Add child's details +
             </div>
         <div className="optional p-5 mt-3" onClick={()=>navigate("/profile")}>
                 Complete later
             </div>
-    </div>)
+    </div>
+    </>
+    )
 }
 
 export default AddOptional;

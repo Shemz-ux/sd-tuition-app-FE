@@ -3,6 +3,8 @@ import './App.css'
 import HomePage from './components/HomePage';
 import ParentProfile from './components/ParentProfile';
 import Register from "./components/Register";
+import AddChild from "./components/AddChild";
+import ChildProfile from "./components/ChildProfile";
 
 function App() {
 
@@ -12,6 +14,7 @@ function App() {
         <Route path="/" element={<HomePage/>}/>
         <Route path="/profile" element={<ParentProfile/>}/>
         <Route path="/register" element={<Register/>}/>
+        <Route path="/addChild" element={<ChildProfile/>}/>
       </Routes>
     </>
   )

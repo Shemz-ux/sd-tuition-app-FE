@@ -7,13 +7,19 @@ import { Link } from "react-router-dom";
 function HomePage(){
     return <div id="home">
             <Navbar/>
-
             <div className="welcome mb-5 mt-0 container">
                 <div className="row">
                     <div className="col-md-4 d-flex flex-column align-items-center">
-                        <img src={profile} alt="profile pic" style={{ width: "100%", height: "auto", maxWidth: "350px" }} />
-                        <Link to="/register">
-                            <button className="btn mb-3" type="submit">Register</button>
+                        <div className="pic mt-5">
+                            <img src={profile} alt="profile pic" style={{
+                                    width: "100%",
+                                    height: "100%",
+                                    objectFit: "cover"
+                                }} />
+                            </div>
+                        {/* needs conditional logic here to verify if logged in or not */}
+                        <Link to="/register" className="mt-5">
+                            <button className="btn mb-3 mt-4" type="submit">Register</button>
                             </Link>
                         </div>
                         
@@ -45,7 +51,7 @@ function HomePage(){
             </div>
 
             <div className="my-approach mt-3 mb-3">
-                <h4>My approach</h4>
+                <h3>My approach</h3>
                 <div className="d-flex justify-content-center gap-5 flex-wrap mt-4">
                     <div className="w-25 text-center">
                         <p style={{ color: "#F0AE58" }}>01.</p>
@@ -78,7 +84,7 @@ function HomePage(){
             </div>
 
             <div className="exam-board mt-3">
-                <h4>Exam boards</h4>
+                <h3>Exam boards</h3>
                 <div className="d-flex justify-content-center gap-5 flex-wrap mt-4">
                     <p>exam b1</p>
                     <p>exam b1</p>
@@ -87,31 +93,31 @@ function HomePage(){
                 </div>
 
             <div className="exam-board mt-3 mb-3">
-                <h4>Reviews</h4>
+                <h3>Reviews</h3>
                 <div className="d-flex justify-content-center gap-5 flex-wrap mt-4">
                     <div className="w-25 text-center">
                         <BsPeople size={100}/>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
                     </div>
                     <div className="w-25 text-center m-3">
                         <BsPeople size={100}/>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
                     </div>
                     <div className="w-25 text-center m-3">
                         <BsPeople size={100}/>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
                     </div>
                     <div className="w-25 text-center m-3">
                         <BsPeople size={100}/>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
                     </div>
                     <div className="w-25 text-center m-3">
                         <BsPeople size={100}/>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
                     </div>
                     <div className="w-25 text-center m-3">
                         <BsPeople size={100}/>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
                     </div>
 
                     </div>
