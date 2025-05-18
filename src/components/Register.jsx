@@ -1,9 +1,15 @@
+import { useState } from "react";
 import { Navbar } from "./navbar";
+import AddOptional from "./AddOptional";
 
 function Register(){
+    const [clicked, setClicked] = useState(false)
+
     return  (
     <>
-        <Navbar/>
+        {!clicked ? (
+        <>
+        <Navbar />
         <div className="d-flex flex-column align-items-center">
         <h1>Register</h1>
             <div className="w-75 w-md-50 w-lg-30 mt-3">
@@ -46,10 +52,13 @@ function Register(){
                     </form>
                 </div>
                 <div className="w-75 w-md-50 w-lg-30 mt-5 text-center">
-                    <button className="btn mb-2 mt-3 p-2" type="submit">Submit</button>
+                    <button className="btn mb-2 mt-3 p-2" type="submit"
+                    onClick={() => setClicked(true)}>Submit</button>
                     </div>
             </div>
-         </>
+            </>
+            ) : AddOptional()}
+            </>
     )
 }
 

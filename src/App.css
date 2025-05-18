@@ -116,3 +116,16 @@
 .delete-account:hover{
   border-bottom: 1px solid red;
 }
+
+.optional {
+  background-color: transparent !important;
+  border: 1px solid white;
+  border-radius: 8px;
+  color: white !important;
+  cursor: pointer;
+}
+
+.optional:hover{
+  background-color: #F0AE58 !important;
+  color: black;
+}
