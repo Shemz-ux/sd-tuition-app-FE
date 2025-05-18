@@ -57,7 +57,7 @@ function Register(){
                     </div>
             </div>
             </>
-            ) : AddOptional()}
+            ) : <AddOptional/>}
             </>
     )
 }

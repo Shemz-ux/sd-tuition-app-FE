@@ -12,7 +12,6 @@ function App() {
         <Route path="/" element={<HomePage/>}/>
         <Route path="/profile" element={<ParentProfile/>}/>
         <Route path="/register" element={<Register/>}/>
-        <Route path="/addChild" element={<Register/>}/>
       </Routes>
     </>
   )
