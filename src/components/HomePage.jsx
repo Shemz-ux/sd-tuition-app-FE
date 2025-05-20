@@ -3,6 +3,11 @@ import { PiStudent } from "react-icons/pi";
 import { BsPeople } from "react-icons/bs";
 import profile from "../assets/SK avatar.png";
 import { Link } from "react-router-dom";
+import { IoStarSharp } from "react-icons/io5";
+import { RxLapTimer } from "react-icons/rx";
+import { ImConnection } from "react-icons/im";
+import { FaChalkboardTeacher } from "react-icons/fa";
+import aniOne from "../assets/Ani 1.jpg";
 
 function HomePage(){
     return <div id="home">
@@ -51,7 +56,7 @@ function HomePage(){
             </div>
 
             <div className="my-approach mt-3 mb-3">
-                <h3>My approach</h3>
+                <h2>My approach</h2>
                 <div className="d-flex justify-content-center gap-5 flex-wrap mt-4">
                     <div className="w-25 text-center">
                         <p style={{ color: "#F0AE58" }}>01.</p>
@@ -83,40 +88,58 @@ function HomePage(){
                     </div>
             </div>
 
-            <div className="exam-board mt-3">
-                <h3>Exam boards</h3>
-                <div className="d-flex justify-content-center gap-5 flex-wrap mt-4">
-                    <p>exam b1</p>
-                    <p>exam b1</p>
-
+            <div className="exam-board mt-5">
+                <h2>Our sessions</h2>
+                <div className="d-flex justify-content-center gap-5 flex-wrap mt-5">
+                    <div className="w-25 text-center m-3">
+                        <ImConnection  className="mb-3"size={80}/>
+                        <h5>Online</h5>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                        </div>
+                    <div className="w-25 text-center m-3">
+                        <RxLapTimer className="mb-3"size={80}/>
+                        <h5>60 - 90mins</h5>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                        </div>
+                    <div className="w-25 text-center m-3">
+                        <FaChalkboardTeacher className="mb-3"size={80}/>
+                        <h5>Interactive</h5>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                        </div>
                     </div>
                 </div>
 
-            <div className="exam-board mt-3 mb-3">
-                <h3>Reviews</h3>
+            <div className="exam-board mt-5 mb-3">
+                <h2>Reviews</h2>
                 <div className="d-flex justify-content-center gap-5 flex-wrap mt-4">
-                    <div className="w-25 text-center">
+                    <div className="w-25 text-center m-3">
                         <BsPeople size={100}/>
+                        {stars()}
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
                     </div>
                     <div className="w-25 text-center m-3">
                         <BsPeople size={100}/>
+                        {stars()}
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
                     </div>
                     <div className="w-25 text-center m-3">
                         <BsPeople size={100}/>
+                        {stars()}
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
                     </div>
                     <div className="w-25 text-center m-3">
                         <BsPeople size={100}/>
+                        {stars()}
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
                     </div>
                     <div className="w-25 text-center m-3">
                         <BsPeople size={100}/>
+                        {stars()}
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
                     </div>
                     <div className="w-25 text-center m-3">
                         <BsPeople size={100}/>
+                        {stars()}
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
                     </div>
 
@@ -128,6 +151,18 @@ function HomePage(){
                 </div>
 
         </div>
+}
+
+function stars(){
+    return (
+        <div className="m-2">
+            <IoStarSharp size={20} style={{color: "#F0AE58"}}/>
+            <IoStarSharp size={20} style={{color: "#F0AE58"}}/>
+            <IoStarSharp size={20} style={{color: "#F0AE58"}}/>
+            <IoStarSharp size={20} style={{color: "#F0AE58"}}/>
+            <IoStarSharp size={20} style={{color: "#F0AE58"}}/>
+            </div>
+    )
 }
 
 export default HomePage;

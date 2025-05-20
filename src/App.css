@@ -50,6 +50,18 @@
   margin-bottom: 1rem;
 }
 
+.images{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  /* border: 1px solid #ffffff; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
 .user-icon{
   color: #F0AE58 !important;
 }
