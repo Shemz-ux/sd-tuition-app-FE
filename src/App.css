@@ -15,10 +15,6 @@
   cursor: pointer;
 }
 
-/* .logo:hover {
-  filter: drop-shadow(0 0 2em #F0AE58);
-} */
-
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
@@ -99,21 +95,21 @@
 }
 
 .transparent-input::placeholder{
-  color: rgba(255, 255, 255, 0.522);
+  color: rgba(255, 255, 255, 0.522) !important;
 } 
 
 .form-select{
-  color: rgba(255, 255, 255, 0.523) !important;
+  color: rgba(255, 255, 255, 0.522) !important;
 }
 
 .form-select:focus{
-  box-shadow: 0 0 0 0.2rem rgba(240, 174, 88, 0.5) !important; /* soft gold glow */
+  box-shadow: 0 0 0 0.2rem rgba(240, 174, 88, 0.5) !important;
   border-color: #F0AE58 !important;
   outline: none;
 }
 
 .form-control:focus {
-  box-shadow: 0 0 0 0.2rem rgba(240, 174, 88, 0.5) !important; /* soft gold glow */
+  box-shadow: 0 0 0 0.2rem rgba(240, 174, 88, 0.5) !important;
   border-color: #F0AE58 !important;
   outline: none;
 }

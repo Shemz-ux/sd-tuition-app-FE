@@ -22,7 +22,7 @@ function AddChild(){
                         </div>
                         <div class="col-md-6">
                             <label for="yearGroup" class="form-label">Year group</label>
-                            <select class="form-select form-select-lg mb-3 transparent-input" id="yearGroup" aria-label="Large select example">
+                            <select class="form-select form-select-lg mb-3 transparent-input" id="yearGroup" aria-label="Large select example" style={{color: "#ffffff"}}>
                                 <option selected>Select year group</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
