@@ -15,3 +15,10 @@ export const postChildByParentId = (newChild, parentId) => {
     .post(`/parents/${parentId}/children`, newChild)
     .then(({data})=>data);
 }
+
+export const updateParentById = (updateParent, parentId) => {
+    console.log(updateParent)
+    return api
+    .patch(`/parents/${parentId}`, updateParent)
+    .then(({data})=>data);
+}

@@ -1,13 +1,36 @@
 import { useEffect, useState } from "react";
 import AddChild from "./AddChild";
 import { Navbar } from "./navbar";
-import { getParentById } from "../api";
+import { getParentById, updateParentById } from "../utils/api";
+import { removeEmpty } from "../utils/utils";
 
 function ParentProfile(){
     const [showChildForm, setShowChildForm] = useState(false)
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState(false)
     const [getParentInfo, setGetParentInfo] = useState(null)
+
+    const [name, setName] = useState("")
+    const [updateLastName, setUpdateLastName] = useState("")
+    const [updateEmail, setUpdateEmail] = useState("")
+    const [updateMobile, setUpdateMobile] = useState("")
+    // const [updateCity, setUpdateCity] = useState("")
+
+    const [childName, setChildName] = useState("")
+    const [updateChildLastName, setUpdateChildLastName] = useState("")
+    
+
+    function handleParentSubmit(){
+        const updateParent = removeEmpty({ firstName: name, lastName: updateLastName, email: updateEmail, mobile: updateMobile })
+
+        console.log(updateParent)
+ 
+        updateParentById(updateParent, 1)
+        .then((data)=>{
+            return data
+        })
+        .catch((err)=>setError(err))
+    }
 
     useEffect(()=>{
         setLoading(true)
@@ -35,28 +58,28 @@ function ParentProfile(){
                 <form className="row g-4 mt-3">
                     <div className="col-md-6 ">
                         <label htmlFor="firstName" className="form-label">First Name</label>
-                        <input type="text" className="form-control form-control-lg transparent-input" id="firstName" placeholder="Enter first name"  value={firstName} required/>
+                        <input type="text" className="form-control form-control-lg transparent-input" id="firstName" placeholder="Enter first name" defaultValue={firstName} onChange={(e)=> setName(e.target.value)} required/>
                         <div className="valid-feedback" style={{ color: "#F0AE58" }}>
                             Looks good!
                             </div>
                     </div>
                     <div className="col-md-6">
                         <label htmlFor="lastName" className="form-label">Last Name</label>
-                        <input type="text" className="form-control form-control-lg transparent-input" id="lastName" placeholder="Enter first name" value={lastName} required/>
+                        <input type="text" className="form-control form-control-lg transparent-input" id="lastName" placeholder="Enter first name" defaultValue={lastName} onChange={(e)=> setUpdateLastName(e.target.value)} required/>
                         <div className="valid-feedback" style={{ color: "#F0AE58" }}>
                             Looks good!
                             </div>
                     </div>
                     <div className="col-12">
                         <label htmlFor="email" class="form-label">Email</label>
-                        <input type="email" class="form-control form-control-lg transparent-input" id="email" placeholder="Enter your email" value={email} required/>
+                        <input type="email" class="form-control form-control-lg transparent-input" id="email" placeholder="Enter your email" defaultValue={email} onChange={(e)=>setUpdateEmail(e.target.value)} required/>
                         <div class="valid-feedback" style={{ color: "#F0AE58" }}>
                             Looks good!
                             </div>
                     </div>
                     <div class="col-12">
                         <label htmlFor="mobile" class="form-label">Mobile</label>
-                        <input type="integer" class="form-control form-control-lg transparent-input" id="mobile" placeholder="Enter your mobile" value={mobile} required/>
+                        <input type="text" class="form-control form-control-lg transparent-input" id="mobile" placeholder="Enter your mobile" defaultValue={mobile} onChange={(e)=>setUpdateMobile(e.target.value)} required/>
                         <div class="valid-feedback" style={{ color: "#F0AE58" }}>
                             Looks good!
                             </div>
@@ -70,12 +93,36 @@ function ParentProfile(){
                     </div>
                         </form>
                 </div>
+
                 <div className="w-75 w-md-50 w-lg-30 mt-3 text-start">
-                    <button className="btn mb-2 mt-3 p-2" type="submit">Save changes</button>
+                    <button className="btn mb-2 mt-3 p-2" type="submit" onClick={()=> handleParentSubmit()}>Save changes</button>
                     </div>
 
-                    {childDetails(childInfo.name, childInfo.school, childInfo.yearGroup, childInfo.currentGrade, childInfo.additionalInfo)}
+                    {/* {getParentInfo.child && getParentInfo.child.map((childInfo, index) => (
+                    <ChildDetails key={childInfo.childId || index} {...childInfo} />))}
+                    {showChildForm && <AddChild />} */}
+
+                <div className="w-75 w-md-50 w-lg-30 mt-1 text-start">
+                    <div className="mt-3">
+                        <h1>Child's details</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                        {getParentInfo.child && getParentInfo.child.map((childInfo, index) => (
+                            <div className="mt-3" key={childInfo.childId}>
+                                <h4>Child {index+1}:</h4>
+                                {childDetails(
+                                childInfo.childId,
+                                childInfo.name,
+                                childInfo.school,
+                                childInfo.yearGroup,
+                                childInfo.currentGrade,
+                                childInfo.additionalInfo
+                                )}
+                            </div>
+                            ))}
+                        </div>
+                    </div>
                     {showChildForm && <AddChild/>}
+
                         <div className="add-child p-3 mt-3" onClick={()=> setShowChildForm(prev => !prev)}>
                             {showChildForm ? "Remove child -" : "Add child +"}
                             </div>
@@ -86,14 +133,10 @@ function ParentProfile(){
 )
 }
 
-function childDetails(name, school, yearGroup, grade, info){
+function childDetails(id, name, school, yearGroup, grade, info){
     return (
-        <div className="w-75 w-md-50 w-lg-30 mt-4 text-start">
-                    <div className="mt-3">
-                    <h1>Child's details</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
             <div>
-                <form class="row g-3 mt-1">
+                <form class="row g-3 mt-0">
                         <div class="col-12">
                             <label for="name" class="form-label">Name</label>
                             <input type="text" class="form-control form-control-lg transparent-input" id="name" placeholder="Child's name" value={name} required/>
@@ -139,10 +182,8 @@ function childDetails(name, school, yearGroup, grade, info){
                             </div>
                     </form>
                     <div className="w-75 w-md-50 w-lg-30 mt-1 text-start">
-                                <button className="btn mb-2 mt-3 p-2" type="submit">Save Changes</button>
+                                <button className="btn mb-2 mt-3 mb-3 p-2" type="submit">Save Changes</button>
                                 </div>
-                    </div>
-                        </div>
                     </div>
     )
 }
